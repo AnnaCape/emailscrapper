@@ -14,6 +14,7 @@ FIM ([.]{PALAVRA})+
 %%
 {MESCLA}[@]{MESCLA}{FIM}? { printf("%s\n", yytext); }
 {MUITO}[@]{MUITO}{FIM} {  printf("%s\n", yytext); }
+{MESCLA}[@]{MESCLA}{FIM}/[.] {  printf("%s\n", yytext); }
 [[:space:]]+ ;
 [^[:space:]]+ ;
 [.\n]* ;
